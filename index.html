@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav>
+          <h2>Aleksandar</h2>
+          <ul id="listUl">
+            <li>
+              <a href="#">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <i class="fa-solid fa-xmark" onclick="closeMenu()"></i>
+          </ul>
+          <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+        </nav>
+        <div class="header-text">
+          <p>Front-End developer</p>
+          <h1>
+            Hi, I'm <span> Aleksandar </span> Petras <br />
+            from Bosnia
+          </h1>
+        </div>
+      </div>
+    </div>
+    <!-- about -->
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/background.jpg" alt="" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+             My name is Aleksandar Petraš and I would like to introduce myself to you.
+ 
+For the last year and a half, I have been working independently on small front-end development projects. This new experience was really interesting for me and I can definitely see myself working in this field. 
+ 
+            </p>
+            <div class="tab-titles">
+              <div class="tab-links active-link" onclick="clickTab('skills')">
+                Skills
+              </div>
+              <div class="tab-links" onclick="clickTab('experience')">
+                Experience
+              </div>
+              <div class="tab-links" onclick="clickTab('education')">
+                Education
+              </div>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span> Front-End develompment </span><br />Designing Web/App interfeces</li>
+                <li><span> Web development </span><br />Web app Development</li>
+                <li><span> React </span><br />React Web development</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span> 2023-current </span><br />building individualy small react apps</li>
+                <li><span> 2021- 2022 </span><br />Front-End developing projects using html, css, JS</li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li><span> 2006 -2011 </span><br />University of Banja Luka</li>
+                <li><span> 2013- 2020 </span><br />Logistic support in USA</li>
+                <li><span> 2021-2023 </span><br />Web development</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- services -->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My services</h1>
+        <div class="services-list">
+          <div>
+           <i class="fa-brands fa-react"></i>
+            <h2>React shopping cart app</h2>
+            <p>
+             Shopping cart with listed products stored locally and functionality for adding removing and calculating subtotal.
+            </p>
+            <a href="https://shopping-cart-react-111.netlify.app/"   target="_blank" rel="noopener noreferrer">Learn more</a>
+          </div>
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>UI/UX design</h2>
+            <p>
+              React movie search app.
+            </p>
+            <a href="https://Petras-aleksandar988.github.io/movieland-react" target="_blank" rel="noopener noreferrer" >Learn more</a>
+          </div>
+          <div>
+             <i class="fa-brands fa-react"></i>
+            <h2>Flashcard quiz</h2>
+            <p>
+              Quiz with the possibility of generating max 50 questions in different categories. Click on the card and flip it to the other side where is the correct answer.
+            </p>
+            <a href="https://flashcard-quiz-react-89e1c3.netlify.app" target="_blank" rel="noopener noreferrer" >Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- portfolio -->
+     <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My work</h1>
+         <div class="work-list"> 
+            <div class="work">
+                <img src="./images/laptop1.jpg">
+                <div class="layer">
+                    <h3>Social media app</h3>
+                    <p>social media app that use cookie for session control. it is possible to create, edit or delete  profile, add or delete posts, comment or like other posts,and permanently delete account.</p>
+                    <a href="https://social-network-98304.netlify.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./images/laptop2.jpg" alt="">
+                 <div class="layer">
+                    <h3>Weather app</h3>
+                    <p>App that show weather in your city. Info about hourly, daily and weekly current,high,low,feels like  temeratures, wind and percipitation.</p>
+                    <a href="https://weather-app-7c624b.netlify.app/"  target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="./images/laptop3.jpg" alt="">
+                 <div class="layer">
+                    <h3>Navbar</h3>
+                    <p>Shopping cart app that use local storage like a data base. Complete functionality for adding, removing and deleting items from the cart.</p>
+                    <a href="https://shopping-cart-d10df4.netlify.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <a href="https://github.com/Petras-aleksandar988?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn">See More</a>
+</div> 
+    <!-- contact -->
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i>petras.aleksandar49@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> +387644414320</p>
+                    <div class="social-icons">
+                        <a href="https://github.com/Petras-aleksandar988?tab=repositories" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aleksandar-petras-779804220"><i class="fa-brands fa-linkedin" target="_blank"></i></a>
+                    </div>
+                    <a href="./images/CV--Aleksandar Petras - Copy.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button class="btn btn2" type="submit" >submit</button>
+                    </form>
+                    <span id="message"></span>
+                </div>
+            </div>
+          </div>
+          <div class="copyright">Copyright © by Aleksa </div>
+    </div>
+  </body>
+</html>
