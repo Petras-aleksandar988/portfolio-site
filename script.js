@@ -25,7 +25,7 @@ function closeMenu() {
 let links = document.querySelectorAll("li a")
 
  links.forEach(link => {
-    link.addEventListener("click", e => {
+    link.addEventListener("click", () => {
      closeMenu()
   })
 })

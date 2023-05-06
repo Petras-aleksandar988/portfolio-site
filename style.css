@@ -269,14 +269,16 @@ nav ul li a:hover::after {
 }
 .btn {
   display: block;
-  width: fit-content;
-  margin: 30px auto;
+  width: 80%;
+  margin: 20px auto;
   border: 1px solid #f31717;
-  padding: 20px 50px;
+  padding: 20px 40px;
   border-radius: 10px;
   text-decoration: none;
   color: #fff;
   transition: 0.5s;
+  line-break: none;
+  text-align: center;
 }
 .btn:hover {
   background-color: #f31717;
