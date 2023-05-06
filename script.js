@@ -1,4 +1,5 @@
 const tabLinks = document.querySelectorAll(".tab-links");
+
 const tabContents = document.querySelectorAll(".tab-contents");
 
 function clickTab(tabname) {
@@ -16,11 +17,19 @@ function clickTab(tabname) {
 const listUl = document.querySelector("#listUl");
 console.log(listUl);
 function openMenu() {
-  listUl.style.right = 0;
+  listUl.style.right = "0";
 }
 function closeMenu() {
-  listUl.style.right = "-200px";
+  listUl.style.right = "-100%";
 }
+let links = document.querySelectorAll("li a")
+
+ links.forEach(link => {
+    link.addEventListener("click", e => {
+     closeMenu()
+  })
+})
+
 
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbwoumaDlKxNJsx-88XJG5dnvxz7Z3UvZtGH_4yXkX0nGfuoKAXC2BOWIFVUPXJgzLdc/exec";
@@ -38,3 +47,5 @@ form.addEventListener("submit", (e) => {
     })
     .catch((error) => console.error("Error!", error.message));
 });
+
+
