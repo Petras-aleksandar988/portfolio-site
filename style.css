@@ -211,7 +211,7 @@ nav ul li a:hover::after {
 }
 .work-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
   gap: 30px;
 
 }
@@ -245,11 +245,11 @@ nav ul li a:hover::after {
 }
 
 .layer h3 {
-  font-weight: 400;
-  margin-bottom: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
 }
 .layer p{
-  font-size:16px;
+  font-size:18px;
 }
 .layer a {
   margin-top: 20px;
@@ -438,6 +438,17 @@ margin: 20px 0;
   }
   #about{
     padding: 0 4%;
+  }
+  .layer h3 {
+    font-weight: 700;
+    margin-bottom: 15px;
+  }
+  .layer p{
+    font-size:14px;
+  }
+  .work-list {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+ 
   }
 }
 #message{
