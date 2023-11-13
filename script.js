@@ -15,7 +15,6 @@ function clickTab(tabname) {
 }
 
 const listUl = document.querySelector("#listUl");
-console.log(listUl);
 function openMenu() {
   listUl.style.right = "0";
 }
@@ -49,3 +48,9 @@ form.addEventListener("submit", (e) => {
 });
 
 
+ const work = document.querySelectorAll(".work");
+ work.forEach(e=>{
+  e.addEventListener("click", (layer)=>{
+    layer.target.classList.toggle("opacity");
+  })
+ })
