@@ -48,7 +48,7 @@ form.addEventListener("submit", (e) => {
 });
 
 
- const work = document.querySelectorAll(".work");
+ const work = document.querySelectorAll(".layer");
  work.forEach(e=>{
   e.addEventListener("click", (layer)=>{
     layer.target.classList.toggle("opacity");
