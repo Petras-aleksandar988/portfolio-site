@@ -48,7 +48,7 @@ form.addEventListener("submit", (e) => {
 });
 
 
- const work = document.querySelector(".work-list").addEventListener("click", layer=>{
-    layer.target.classList.toggle("opacity");
-  })
+//  const work = document.querySelector(".work-list").addEventListener("click", layer=>{
+//     layer.target.classList.toggle("opacity");
+//   })
  
