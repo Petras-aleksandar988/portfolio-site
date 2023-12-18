@@ -82,7 +82,7 @@
             </div>
             <div class="tab-contents" id="experience">
               <ul>
-                <li><span> 2023-current </span><br />working at Infomedia on api-shops projects</li>
+                <li><span> 2023-current </span><br />working at Infomedia on e-commerce projects</li>
                 <li><span> 2022-2023 </span><br />building individual small app using js, react , php, laravel, mysql</li>
                 <li><span> 2021- 2022 </span><br />Front-End developing projects using html, css, js</li>
               </ul>
@@ -135,44 +135,60 @@
       <div class="container">
         <h1 class="sub-title">PHP and JS</h1>
          <div class="work-list"> 
-            <div class="work">
+            <div class="work" data-project="laravel">
+                <img src="./images/laptop3.jpg">
+                <div class="layer">
+
+                    <h3>Find Job build using Laravel</h3>
+                    <p>Admin dashboard can be use to manage members and trainers for gym. It contains members and trainers list with general info and upload pictures.</p>
+                    <a href="https://find-laravel-jobs.net/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <span class="more-info" ><i class="fa-solid fa-info"></i> More Info</span>
+                </div>
+            </div>
+            <div class="work" data-project="gym-panel">
                 <img src="./images/laptop1.jpg">
                 <div class="layer">
                     <h3>Gym panel PHP MySql</h3>
                     <p>Admin dashboard can be use to manage members and trainers for gym. It contains members and trainers list with general info and upload pictures.</p>
                     <a href="https://admin-panel-gym.000webhostapp.com/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <span class="more-info" ><i class="fa-solid fa-info"></i> More Info</span>
                 </div>
             </div>
-            <div class="work">
+            <div class="work"  data-project="e-commerce-php">
                 <img src="./images/laptop2.jpg">
                 <div class="layer">
                     <h3>E-commerce PHP MySql</h3>
                     <p>Two panels, user and admin. User can choose products, select quantity, check cart, and see orders. In admin panel is possible to add info and image for product.</p>
-                    <a href="https://e-commerce-shop-app.000webhostapp.com/login.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <a href="https://e-commerce-site-aleksa.shop/login.php" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <span class="more-info"><i class="fa-solid fa-info"></i> More Info</span>
                 </div>
             </div>
-            <div class="work">
-                <img src="./images/laptop3.jpg">
+          
+            <div class="work" data-project="social-media">
+                <img src="./images/laptop2.jpg" alt="">
                 <div class="layer">
-                    <h3>Social media JS OOP</h3>
-                    <p>social media app that use cookie for session control. it is possible to create, edit or delete  profile, add or delete posts, comment or like other posts.</p>
-                    <a href="https://social-network-98304.netlify.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
-                </div>
+                  <h3>Social media JS OOP</h3>
+                  <p>social media app that use cookie for session control. it is possible to create, edit or delete  profile, add or delete posts, comment or like other posts.</p>
+                  <a href="https://social-network-98304.netlify.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                  <span class="more-info"><i class="fa-solid fa-info"></i> More Info</span>
+              </div>
             </div>
-            <div class="work">
+            <div class="work" data-project="weather-app">
                 <img src="./images/laptop2.jpg" alt="">
                  <div class="layer">
                     <h3>Weather app JS</h3>
                     <p>App that show weather in your city. Info about hourly, daily and weekly current,high,low,feels like  temeratures, wind and percipitation.</p>
                     <a href="https://weather-app-7c624b.netlify.app/"  target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <span class="more-info"><i class="fa-solid fa-info"></i> More Info</span>
                 </div>
             </div>
-            <div class="work">
+            <div class="work" data-project="shopping-cart">
                 <img src="./images/laptop3.jpg" alt="">
                  <div class="layer">
                     <h3>Shopping cart JS</h3>
                     <p>Shopping cart app that use local storage like a data base. Complete functionality for adding, removing and deleting items from the cart.</p>
                     <a href="https://shopping-cart-d10df4.netlify.app" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-up-right-from-square"></i></a>
+                    <span class="more-info"><i class="fa-solid fa-info"></i> More Info</span>
                 </div>
             </div>
         </div> 
@@ -207,5 +223,104 @@
           </div>
           <div class="copyright">Copyright © by Aleksa </div>
     </div>
+
+
+<!-- pop up modal for more info  -->
+<div class="modal" id="myModal">
+  <div class="modal-content">
+    
+      <span class="close" onclick="closeModal()">X</span>
+      <p>
+   
+<div class="project-content" id="laravel-content">
+
+  <h4>Laravel app for job search.</h4>
+  <p>
+    The app is built using the Laravel framework. It utilizes the `ListingController` to render the index view and pass arguments from the database using the `Listing` model. With a helper method, the listing model is filtered to display the latest jobs. Additionally, the results are filtered when clicking on any tag. Another filter is the search input, where the value is sent by a GET request and compared against the table of title, description, and tags in the database. If there is a match, we get filtered jobs.
+  </p>
+  <p>
+    Every job has its own dynamic route created in the `web.php` file. Additionally, each route is protected with middleware, depending on whether the user is logged in or not. When a user is logged in, it is possible to create a job offer and also update or delete the same job offer.
+  </p>
+  <p>
+    Inside the `views/components` folder, there are Blade.php files that handle functionalities such as registration and login. The `components` folder contains files that I use more than once, such as a layout containing the header and footer. Inside the layout, there are deliveries that I use across the whole app, like Tailwind CSS and Alpine.js. Another component is `listing-card`, which contains all the information from the database for every job listed on the site.
+  </p>
+  <p>
+    For registration and sign-in, I use a `UserController` to validate fields inside the registration form and to compare email and password fields with the database in the login form.
+  </p>
+</div>
+
+<div class="project-content" id="gym-panel-content">
+
+  <h4>Gym Panel App</h4>
+  <p style="color: rgb(176, 166, 166);">To use the app, you need to have active credentials.</p>
+  <p>The Gym Panel App is a versatile PHP-based application designed primarily for gym administrators but with the flexibility to adapt to various business needs. Its main purpose is to empower gym administrators with a comprehensive set of tools for efficient management and administration.</p>
+  <p>
+    When a user logs in with the correct credentials, it is possible to see the main menu that contains a list of members. It retrieves information from the database about each member info.The SQL query retrieves comprehensive information about members in a database by combining data from multiple tables. It establishes connections between the members table, training_plans table, and trainers table to assemble a detailed dataset. This allows for a holistic view of each member's details, including their training plan, assigned trainer, and relevant trainer information. 
+  </p>
+  <p>Register member and trainer handle  form submission via POST method, capturing member and trainer details. It then inserts the data into a MySQL database table named members and trainers. Additionally, it generates a PDF access card for the new member, incorporating information like member ID, name, email, and training plan details. The access card PDF is stored, and its file path is updated in the database. Finally, a success message is set, and the user is redirected to an admin dashboard for members.</p>
+  <p>
+    <p>
+      Images are stored inside the 'members_photos' folder, and when the correct path is retrieved from the database, it shows the corresponding image. If the image table is empty, the main picture will show up for both members and trainers.
+    </p>
+ <p>
+  It is possible to assign a trainer from the list to any member, and that information will be updated inside the database. Training plans can be set up, deleted, or updated for existing plans.
+ </p>
+  </p>
+</div>
+<div class="project-content" id="e-commerce-php-content">
+  <h4>E-commerce App</h4>
+  <p style="color: rgb(176, 166, 166);">To use the app, you need to have active credentials, for admin and user panel.</p>
+
+  <p>E-commerce application, built using PHP and MySQL, offers seamless login and registration for users. Within the user panel, customers can easily select the desired quantity of products and add them to their shopping cart. Once users have chosen the products they wish to purchase, they can proceed to place an order. During the ordering process, users provide essential information such as address, city, and state. The order details are then securely stored in the database, effectively simulating  order fulfillment process.</p>
+  <p>
+    Admins log in using the same interface as regular users. Once logged in, admins can easily add new products with details like name, price, size, and images. They also have the ability to update or remove existing products, giving them control over the product catalog.
+  </p>
+</div>
+<div class="project-content" id="social-media-content">
+  <h4>Social media App</h4>
+ 
+  <p>Social network with the possibility to log in with an existing account, register a new account, post something on the wall, comment on every post individually.
+
+    Users can edit their username and password, logout and delete their profile.
+    
+    Info about users, posts, and comments are stored in mockAPI database (https://mockapi.io/)  using fetching.</p>
+    <p>
+      This app is a good example of using OOP and asynchronous functions. I utilize API endpoints for storing, updating, and deleting inputs. By defining the method and specifying the file format in the header, I can send objects inside the body to the endpoint, store them, call them from the API, and present them when needed.
+    </p>
+
+</div>
+<div class="project-content" id="weather-app-content">
+  <h4>Weaher App</h4>
+ 
+  <p>An app that uses your device location to show the weather in your city.
+
+    displaying current temperature, and three separate areas that show:
+    
+    daily info about - high, low, max feels like, min feels like temperature, wind speed, and precipitation.
+    weekly info about the sky icon, and max temperature for that day
+    hourly info about temperature, feels like temp, wind speed, and precipitation.</p>
+    <p>
+
+      I use the API https://api.open-meteo.com, and from there, I get all the information I need for the current weather. Inside the fetch, I dynamically set up longitude and latitude so that I get only weather info for the current location and the name of the city as well. Information about weather is set up in three categories: current, daily, and hourly. Each category has its own function which helps me render current and future information about all weather details and present it to the user.
+    </p>
+</div>
+<div class="project-content" id="shopping-cart-content">
+  <h4>Shopping Cart App</h4>
+  
+  <p>Building a shopping cart using local data in folder Data.js.
+    building html structure
+    adapting the site for different sizes of screens
+    implementing functionality with Java Script</p>
+    <p>
+      The app utilizes an array of objects locally set up to simulate a database. It leverages array methods such as filter, map, reduce, and find to implement various functions. These functions include increasing or decreasing product quantities, finding the right product using its ID, calculating the total sum of costs for all products, setting up products in local storage, and deleting from local storage if they are no longer in the cart.
+
+    </p>
+
+</div>
+
+      </p>
+  </div>
+</div>
+
   </body>
 </html>

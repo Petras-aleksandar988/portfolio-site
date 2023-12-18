@@ -226,6 +226,75 @@ nav ul li a:hover::after {
   width: 100%;
   transition: 0.4s;
 }
+/* .work .layer::after {
+  content: "More Info";
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  font-size: 14px;
+} */
+.more-info{
+  position: absolute;
+  top: 3px;
+  right: 20px;
+}
+/* pop up modal for more info  */
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  width: 90%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 5px;
+  border-radius: 10px;
+  max-width: 600px;
+
+}
+.project-content{
+  word-wrap: break-word;
+  color: black;
+  text-align: center;
+}
+.project-content h4 {
+  margin-bottom: 10px;
+}
+.project-content p{
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.close {
+  border-radius: 5px 5px 0 0 ;
+  position: absolute;
+  color: black;
+  font-weight: 700;
+  background: white;
+padding: 3px;
+font-size: 25px;
+
+  top: -27px;
+  right: 0px;
+  cursor: pointer;
+}
+.fa-info{
+  color: red;
+}
+
 .layer {
   cursor: pointer;
   width: 100%;
@@ -238,12 +307,12 @@ nav ul li a:hover::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: end;
   text-align: center;
   padding: 0 30px;
   border-radius: 10px;
   overflow: hidden;
-  transition: 0.4s;
+  /* transition: 0.4s; */
 }
 
 .layer h3 {
@@ -254,10 +323,10 @@ nav ul li a:hover::after {
   font-size:18px;
 }
 .layer a {
-  margin-top: 20px;
+  margin-top: 5px;
   color: #f31717;
   background: rgba(246, 242, 242, 0.7);
-  height: 60px;
+  height: 35px;
   width: 60px;
   border-radius: 50px;
   font-size: 20px;
