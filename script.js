@@ -47,6 +47,54 @@ form.addEventListener("submit", (e) => {
     .catch((error) => console.error("Error!", error.message));
 });
 
+  const modal = document.getElementById("myModal");
+  const trigger = document.querySelectorAll(".work .more-info");
+  const close = document.querySelector('.close')
+  function showProjectContent(project) {
+    console.log(project);
+    // Hide all project content containers
+    const projectContents = document.querySelectorAll('.project-content');
+    projectContents.forEach(function (content) {
+        content.style.display = 'none';
+    });
+
+    // // Show the selected project content container
+    const selectedContent = document.getElementById(project + '-content');
+    if (selectedContent) {
+        selectedContent.style.display = 'block';
+    }
+}
+
+  // Show modal on click
+
+  trigger.forEach(e=>{
+    
+    
+  e.addEventListener("click", function() {
+      modal.style.display = "block";
+      // Extract the project identifier from the data-project attribute
+      var project = this.closest('.work').getAttribute('data-project');
+      // console.log(project);
+
+      // Call showProjectContent with the project identifier
+      showProjectContent(project);
+    })
+  });
+
+  // Close modal when close button is clicked
+  function closeModal() {
+      modal.style.display = "none";
+  }
+  close.addEventListener('click', ()=>{
+    closeModal()
+  })
+  // Close modal if clicked outside of modal content
+  window.addEventListener("click", function(event) {
+      if (event.target === modal) {
+          modal.style.display = "none";
+      }
+  });
+
 
 //  const work = document.querySelector(".work-list").addEventListener("click", layer=>{
 //     layer.target.classList.toggle("opacity");
