@@ -14,20 +14,37 @@ function clickTab(tabname) {
   document.querySelector(`#${tabname}`).classList.add("active-tab");
 }
 
-const listUl = document.querySelector("#listUl");
+
+
+let listUl = document.querySelector("#listUl");
+let isMenuOpen = false;
+
 function openMenu() {
   listUl.style.right = "0";
+  setTimeout(() => {
+    isMenuOpen = true;
+  }, 0);
+
 }
+
 function closeMenu() {
   listUl.style.right = "-100%";
+  isMenuOpen = false;
+ 
 }
-let links = document.querySelectorAll("li a")
 
- links.forEach(link => {
-    link.addEventListener("click", () => {
-     closeMenu()
-  })
-})
+
+
+    
+    window.addEventListener("click", function(event) {
+     if(isMenuOpen && event.target !== listUl){
+      console.log("menu open");
+      closeMenu()
+     }
+    
+  });
+  
+
 
 
 const scriptURL =
@@ -51,7 +68,6 @@ form.addEventListener("submit", (e) => {
   const trigger = document.querySelectorAll(".work .more-info");
   const close = document.querySelector('.close')
   function showProjectContent(project) {
-    console.log(project);
     // Hide all project content containers
     const projectContents = document.querySelectorAll('.project-content');
     projectContents.forEach(function (content) {

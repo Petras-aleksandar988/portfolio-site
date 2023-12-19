@@ -157,7 +157,6 @@ nav ul li a:hover::after {
 /* services */
 #services {
   padding: 30px 0;
-  background-color:#141212;
 }
 .services-list {
   cursor: pointer;
@@ -207,7 +206,8 @@ nav ul li a:hover::after {
 /* portfolio */
 #portfolio {
   padding: 50px 0;
-  background-color: #100f0f;
+  background-color:#141212;
+
 }
 .work-list {
   display: grid;
@@ -454,7 +454,7 @@ nav .fa-solid {
     background-color: #db6969;
     top: 0;
     right: -100%;
-    width: 50%;
+    width: 200px;
     height: 400px;
     text-align: center;
     padding-top: 50px;
@@ -491,6 +491,7 @@ margin: 20px 0;
  
   .services-list div i{
     font-size:30px;
+  background-color: #100f0f;
    
   }
   #contact{
